@@ -4,14 +4,14 @@
 ![Screen Shot](https://raw.githubusercontent.com/billalxcode/2DCube-adventure/master/screenshot/screenshot1.png)
 
 ## Installation
-- Windows
-1. Download release beta [Here](https://github.com/billalxcode/2DCube-adventure/releases/download/v0.1/2D_cube_advanture-v0.1-beta_window.zip)
-2. Extract file 
-3. Buka folder yang tadi di extract
-4. Jalankan file exe nya
+1 Windows
+- Download release beta [Here](https://github.com/billalxcode/2DCube-adventure/releases/download/v0.1/2D_cube_advanture-v0.1-beta_window.zip)
+- Extract file 
+- Buka folder yang tadi di extract
+- Jalankan file exe nya
 
-- Linux
-1. Clone
+2 Linux
+- Clone
 ```shell
 $ wget https://github.com/billalxcode/2DCube-adventure/releases/download/v0.1/2D_cube_advanture-v0.1-beta_linux.tar.gz
 $ tar -xvf 2D_cube_advanture-v0.1-beta_linux.tar.gz
