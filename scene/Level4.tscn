@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://script/Level4.gd" type="Script" id=1]
+[ext_resource path="res://assets/bg.png" type="Texture" id=2]
+[ext_resource path="res://assets/bg-black.png" type="Texture" id=3]
+[ext_resource path="res://scene/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/Coint.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/fonts/CursedTimerUlil-Aznm.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://script/Label.gd" type="Script" id=7]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "bg-black.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 50, 50 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 1695.95, 671.351 )
+scale = Vector2( 131.445, 81.4098 )
+texture = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 50, 50 )
+format = 1
+tile_data = PoolIntArray( 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 196606, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 131092, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 131098, 0, 0, 131099, 0, 0, 131100, 0, 0, 131101, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 196615, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 196634, 0, 0, 196637, 0, 0, 196638, 0, 0, 327675, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262151, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262170, 0, 0, 262174, 0, 0, 393211, 0, 0, 327680, 0, 0, 327683, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327710, 0, 0, 327711, 0, 0, 458747, 0, 0, 393216, 0, 0, 393219, 0, 0, 393223, 0, 0, 393226, 0, 0, 393247, 0, 0, 524283, 0, 0, 458752, 0, 0, 458755, 0, 0, 458759, 0, 0, 458762, 0, 0, 458783, 0, 0, 589819, 0, 0, 589822, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524295, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524319, 0, 0, 655355, 0, 0, 589831, 0, 0, 589834, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 720891, 0, 0, 655367, 0, 0, 655370, 0, 0, 655390, 0, 0, 655391, 0, 0, 786427, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720906, 0, 0, 720918, 0, 0, 720919, 0, 0, 720927, 0, 0, 851963, 0, 0, 786437, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0, 786453, 0, 0, 786454, 0, 0, 786455, 0, 0, 786456, 0, 0, 786457, 0, 0, 786463, 0, 0, 917499, 0, 0, 851973, 0, 0, 851974, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851999, 0, 0, 852000, 0, 0, 983035, 0, 0, 983036, 0, 0, 983037, 0, 0, 983038, 0, 0, 983039, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917510, 0, 0, 917511, 0, 0, 917536, 0, 0, 983042, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983059, 0, 0, 983060, 0, 0, 983072, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048608, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114143, 0, 0, 1114144, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1310726, 0, 0, 1310727, 0, 0, 1310737, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 105.313, 334.046 )
+
+[node name="Coint" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3.35959, 140.479 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -83.561, 302.537 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 456.721, 352.212 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 430.946, 956.373 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 457.858, 194.84 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 844.325, 552.939 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1499.86, 403.622 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1486.53, 805.328 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1261.13, 542.863 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Coint10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 576.683, 686.246 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 52.6303
+margin_top = 50.4823
+margin_right = 102.63
+margin_bottom = 67.4823
+rect_scale = Vector2( 2.5, 2.5 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0.318182, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.00784314, 1, 0, 1 )
+text = "Score: 0"
+align = 1
+valign = 1
+script = ExtResource( 7 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 445.951, 1103.52 )
+rotation = -1.5708
+scale = Vector2( 1, 5 )
+enabled = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( 1121.31, 971.381 )
+rotation = -1.5708
+scale = Vector2( 1, 5 )
+enabled = true
+

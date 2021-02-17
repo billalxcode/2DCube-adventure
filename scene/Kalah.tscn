@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://script/Menang.gd" type="Script" id=1]
+[ext_resource path="res://assets/bg.png" type="Texture" id=2]
+[ext_resource path="res://assets/UI/kalah-text.png" type="Texture" id=3]
+[ext_resource path="res://assets/bg-black.png" type="Texture" id=4]
+[ext_resource path="res://script/PlayerAI.gd" type="Script" id=5]
+[ext_resource path="res://assets/enemy.png" type="Texture" id=6]
+[ext_resource path="res://assets/UI/logo.png" type="Texture" id=7]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "bg-black.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 50, 50 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 29.9243, 31.0399 )
+
+[node name="Kalah" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 1.948, 0 )
+scale = Vector2( 21000, 5.65647e+06 )
+texture = ExtResource( 2 )
+
+[node name="kalah" type="Sprite" parent="."]
+position = Vector2( 512, 120 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 50, 50 )
+format = 1
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 131071, 0, 0, 65536, 0, 0, 65556, 0, 0, 65557, 0, 0, 196607, 0, 0, 131072, 0, 0, 131092, 0, 0, 131093, 0, 0, 262143, 0, 0, 196608, 0, 0, 196628, 0, 0, 196629, 0, 0, 327679, 0, 0, 262144, 0, 0, 262164, 0, 0, 262165, 0, 0, 393215, 0, 0, 327680, 0, 0, 327700, 0, 0, 327701, 0, 0, 458751, 0, 0, 393216, 0, 0, 393236, 0, 0, 393237, 0, 0, 524287, 0, 0, 458752, 0, 0, 458772, 0, 0, 458773, 0, 0, 589823, 0, 0, 524288, 0, 0, 524308, 0, 0, 524309, 0, 0, 655359, 0, 0, 589824, 0, 0, 589844, 0, 0, 589845, 0, 0, 720895, 0, 0, 655360, 0, 0, 655380, 0, 0, 655381, 0, 0, 786431, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 851967, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0, 786451, 0, 0, 786452, 0, 0, 786453, 0, 0 )
+
+[node name="PlayerAI" type="KinematicBody2D" parent="."]
+position = Vector2( 143.861, 99.895 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="image" type="Sprite" parent="PlayerAI"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAI"]
+shape = SubResource( 3 )
+
+[node name="kanan" type="RayCast2D" parent="."]
+position = Vector2( 991.141, 140.325 )
+enabled = true
+cast_to = Vector2( 0, 400 )
+
+[node name="kiri" type="RayCast2D" parent="."]
+position = Vector2( 60.4109, 135.195 )
+enabled = true
+cast_to = Vector2( 0, 400 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 946.313, 100 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
