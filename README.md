@@ -1,6 +1,8 @@
 # 2D Cube Adventure
 2D Cube Adventure adalah sebuah game sederhana. Game ini dibuat dengan engine [Godot Engine](https://godotengine.org), game ini juga dapat berjalan diberbagai platform seperti Windows dan Linux.
 
+![Screen Shot](https://raw.githubusercontent.com/billalxcode/2DCube-adventure/master/screenshot/screenshot1.png)
+
 ## Installation
 - Windows
 1. Download release beta [Here](https://github.com/billalxcode/2DCube-adventure/releases/download/v0.1/2D_cube_advanture-v0.1-beta_window.zip)
