@@ -16,12 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Simple 2D Platformer"
-run/main_scene="res://scene/Level.tscn"
+run/main_scene="res://scene/Level8.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1034
+window/stretch/mode="viewport"
 
 [input]
 
