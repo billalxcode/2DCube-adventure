@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://script/Menang.gd" type="Script" id=1]
 [ext_resource path="res://assets/bg.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://script/PlayerAI.gd" type="Script" id=5]
 [ext_resource path="res://assets/player.png" type="Texture" id=6]
 [ext_resource path="res://assets/UI/logo.png" type="Texture" id=7]
+[ext_resource path="res://assets/audio/win-sfx.ogg" type="AudioStream" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
@@ -75,12 +76,17 @@ enabled = true
 cast_to = Vector2( 0, 400 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 8.0
 autostart = true
 
 [node name="Logo" type="Sprite" parent="."]
 position = Vector2( 946.313, 100 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
+
+[node name="audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+volume_db = -20.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

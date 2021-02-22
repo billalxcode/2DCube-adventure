@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://script/Level3.gd" type="Script" id=1]
 [ext_resource path="res://assets/bg.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scene/Coint.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/fonts/CursedTimerUlil-Aznm.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://script/Label.gd" type="Script" id=7]
+[ext_resource path="res://assets/audio/collect.ogg" type="AudioStream" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
@@ -37,7 +38,7 @@ script = ExtResource( 1 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 793.528, 470.644 )
-scale = Vector2( 51.4397, 34.3874 )
+scale = Vector2( 10000, 10000 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
@@ -119,4 +120,13 @@ position = Vector2( 1986, 413.076 )
 rotation = 1.5708
 scale = Vector2( 1, 9 )
 enabled = true
+
+[node name="gameover" type="RayCast2D" parent="."]
+position = Vector2( -5125, 3072 )
+rotation = -1.5708
+scale = Vector2( 1, 10000 )
+enabled = true
+
+[node name="collect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
 

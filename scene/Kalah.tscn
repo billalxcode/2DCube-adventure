@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://script/Menang.gd" type="Script" id=1]
+[ext_resource path="res://script/Kalah.gd" type="Script" id=1]
 [ext_resource path="res://assets/bg.png" type="Texture" id=2]
 [ext_resource path="res://assets/UI/kalah-text.png" type="Texture" id=3]
 [ext_resource path="res://assets/bg-black.png" type="Texture" id=4]
 [ext_resource path="res://script/PlayerAI.gd" type="Script" id=5]
 [ext_resource path="res://assets/enemy.png" type="Texture" id=6]
 [ext_resource path="res://assets/UI/logo.png" type="Texture" id=7]
+[ext_resource path="res://assets/audio/intro.ogg" type="AudioStream" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
@@ -41,7 +42,7 @@ scale = Vector2( 21000, 5.65647e+06 )
 texture = ExtResource( 2 )
 
 [node name="kalah" type="Sprite" parent="."]
-position = Vector2( 512, 120 )
+position = Vector2( 510.149, 121.851 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
 
@@ -82,5 +83,9 @@ autostart = true
 position = Vector2( 946.313, 100 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
+
+[node name="audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
