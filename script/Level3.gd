@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	$Player/Camera2D/Timer.total_time = 25
 	set_physics_process(true)
 	
 func _physics_process(delta):
@@ -10,5 +11,10 @@ func _physics_process(delta):
 		
 	var raycast = $RayCast2D.is_colliding()
 	var raycast2 = $RayCast2D3.is_colliding()
+	var gameover = $gameover.is_colliding()
 	if raycast or raycast2:
+		$Player/gameOverSFX.play(0)
+		$Player.gameover = true
+		
+	if gameover or $Player/Camera2D/Timer.check():
 		get_tree().change_scene("res://scene/Kalah.tscn")
