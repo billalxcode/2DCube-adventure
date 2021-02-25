@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	$Player/Camera2D/Timer.total_time = 40
+	$Player/Camera2D/Timer.total_time = 400
 	set_physics_process(true)
 	
 func _physics_process(delta):
