@@ -1,0 +1,34 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://script/Objects/Coint.gd" type="Script" id=1]
+[ext_resource path="res://assets/objects/coin/star coin rotate 1.png" type="Texture" id=2]
+[ext_resource path="res://assets/objects/coin/star coin rotate 2.png" type="Texture" id=3]
+[ext_resource path="res://assets/objects/coin/star coin rotate 3.png" type="Texture" id=4]
+[ext_resource path="res://assets/objects/coin/star coin rotate 4.png" type="Texture" id=5]
+[ext_resource path="res://assets/objects/coin/star coin rotate 5.png" type="Texture" id=6]
+[ext_resource path="res://assets/objects/coin/star coin rotate 6.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 25.6781
+
+[node name="Coint" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -1.42696 )
+scale = Vector2( 0.02, 0.02 )
+frames = SubResource( 1 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+

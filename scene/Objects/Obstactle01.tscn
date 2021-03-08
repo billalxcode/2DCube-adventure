@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://script/Objects/Obstactle01.gd" type="Script" id=1]
+[ext_resource path="res://assets/objects/obstacle/obstacle01.png" type="Texture" id=2]
+
+[node name="Obstactle01" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -31.5531, 31.4875, -24.1819, 14.8563, -16.8432, -1.63644, -14.4317, -1.92748, -13.2259, -0.098053, -7.82076, 12.6664, 0.118725, 30.5011, 5.23247, 19.905, 14.1758, -0.691651, 15.3984, -2.34189, 17.7824, -2.43358, 19.3105, -0.0801773, 31.9717, 28.6494, 32.0177, 31.9084, -0.445148, 31.9203 )
+
