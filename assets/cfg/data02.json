@@ -1,0 +1,9 @@
+{
+	"skills":
+	[
+		{"name": "Green Code", "path": "res://assets/character/green_player.png", "move_speed": 4, "jump_force": 350},
+		{"name": "Black Code", "path": "res://assets/character/player.png", "move_speed": 6, "jump_force": 400},
+		{"name": "Red Code", "path": "res://assets/character/enemy.png", "move_speed": 8, "jump_force": 450},
+		{"name": "Blue Code", "path": "res://assets/character/blue_player.png", "move_speed": 10, "jump_force": 500},
+	]
+}
